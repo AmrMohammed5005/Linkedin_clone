@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkedin - Clone </title>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="style.css">
+  <!-- GOOGLE FONTS  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Fredoka:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300&family=Tilt+Warp&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" >
+      </a>
+      <div class="search-box">
+        <img src="images/search.png">
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li><a href="#" class="active"><img src="images/home.png"> <span>Home</span></a></li>
+        <li><a href="#"><img src="images/network.png"> <span>My Network</span></a></li>
+        <li><a href="#"><img src="images/jobs.png"> <span>Jobs</span></a></li>
+        <li><a href="#"><img src="images/message.png"> <span>Messaging</span></a></li>
+        <li><a href="#"><img src="images/notification.png"> <span>Notification</span></a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="online">
+        <img src="images/profile-pic.jpg" class="nav-profile-img" onclick="toggleMenu()">
+      </div>
+    </div>
+    <!-- -----------PROFILE-DROP-DOWN-MENU------------ -->
+    <div class="profile-menu-wrap" id="profileMenu">
+      <div class="profile-menu">
+        <div class="user-info">
+          <img src="images/profile-pic.jpg" >
+          <div>
+            <h3>Amr Mohammed</h3>
+            <a href="profile.html">See your profile</a>
+          </div>
+        </div>
+        <hr>
+        <a href="#" class="profile-menu-link">
+          <img src="images/feedback.png">
+          <p>Give Feedback</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/setting.png">
+          <p>Settings & Privacy</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/help.png">
+          <p>Help & Support</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/display.png">
+          <p>Display & Accessibility</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/logout.png">
+          <p>Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+<!-- -------NAVBAR-CLOSE-------- -->
+  <div class="container">
+<!-- -------LEFT-SIDEBAR-------- -->
+    <div class="left-sidebar">
+      <div class="sidebar-profile-box">
+        <img src="images/cover-pic.png" width="100%">
+        <div class="sidebar-profile-info">
+          <img src="images/profile-pic.jpg" alt="">
+          <h1>Amr Mohammed</h1>
+          <h3>Front-End Developer @ Btengana</h3>
+          <ul>
+            <li>Your profile views <span>323</span></li>
+            <li>Your post views <span>9085</span></li>
+            <li>Your connections <span>210</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-profile-link">
+          <a href="#"><img src="images/items.png">My items</a>
+          <a href="#"><img src="images/premium.png">Try Premium</a>
+        </div>
+      </div>
+      <div class="sidebar-activity" id="sidebarActivity" onclick="toggleActivity()">
+        <h3>RECENT</h3>
+        <a href="#"><img src="images/recent.png" >Web Development</a>
+        <a href="#"><img src="images/recent.png" >User Interface</a>
+        <a href="#"><img src="images/recent.png" >Online Learning</a>
+        <a href="#"><img src="images/recent.png" >Learn Online</a>
+        <a href="#"><img src="images/recent.png" >Code Better</a>
+        <a href="#"><img src="images/recent.png" >Group Learning</a>
+        <h3>GROUPS</h3>
+        <a href="#"><img src="images/group.png" >Web Design Group</a>
+        <a href="#"><img src="images/group.png" >HTML & CSS Learners</a>
+        <a href="#"><img src="images/group.png" >Python & JavaScript Group</a>
+        <a href="#"><img src="images/group.png" >Learn Coding Online</a>
+        <h3>HASHTAG</h3>
+        <a href="#"><img src="images/hashtag.png" > webdevelopment</a>
+        <a href="#"><img src="images/hashtag.png" > userinterface</a>
+        <a href="#"><img src="images/hashtag.png" > onlinelearning</a>
+        <div class="discover-more-link">
+          <a href="#">Discover More</a>
+        </div>
+      </div>
+      <p id="showMoreLink" onclick="toggleActivity()">Show more <b>+</b></p>
+    </div>
+      
+<!-- -------MAIN-CONTENT-------- -->
+    <div class="main-content">
+      <div class="create-post">
+        <div class="create-post-input">
+          <img src="images/profile-pic.jpg" >
+          <textarea rows="2" placeholder="Write a post"></textarea>
+        </div>
+        <div class="create-post-links">
+          <li><img src="images/photo.png">Photo</li>
+          <li><img src="images/video.png">Video</li>
+          <li><img src="images/event.png">Event</li>
+          <li>Post</li> 
+        </div>
+      </div>
+      <div class="sort-by">
+        <hr>
+        <p>Sort by: <span>top <img src="images/down-arrow.png"></span></p>
+      </div>
+      <div class="post">
+        <div class="post-author">
+          <img src="images/member-1.jpg" >
+          <div>
+            <h1>Osama Mohamed</h1>
+            <small>Founder of Elzero Web School | Instructor</small>
+            <small>3 hours ago</small>
+          </div>
+        </div>
+        <p>متخليش حد يستفزك لان معظمهم بيكون مستني رد فعلك علشان يمسكه عليك وبيكون باني سيناريو كامل على اللي انت هتعمله وبيسوقك للطريق اللي هو عاوزه، فلو حسيت انه فاض بيك من الموقف ابعد شوية كدة قبل متاخد تصرف وفكر كويس في ردة فعلك والمترتب عليها وهتخسر ايه لو عملتها، حصل معايا مواقف كتير من دي الأيام اللي فاتت وهحكيلكوا عنها باذن الله واتصرفت فيها ازاي، وهحكيلكوا عن "أكتر تعليق مستفز قابلني في حياتي"
+          —<br>
+          #نصائح_الزيرو</p>
+        <img src="images/post-1.jpg" width="100%">
+        <div class="post-stats">
+          <div>
+            <img src="images/thumbsup.png">
+            <img src="images/love.png">
+            <img src="images/clap.png">
+            <span class="liked-users">Elsam Mahfouz and 676 others</span>
+          </div>
+          <div>
+            <span>22 comments &middot; 40 shares</span>
+          </div>
+        </div>
+        <div class="post-activity">
+          <div>
+            <img src="images/profile-pic.jpg" class="post-activity-user-icon">
+            <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+          </div>
+          <div class="post-activity-link">
+            <img src="images/like.png" alt="">
+            <span>Like</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/comment.png" alt="">
+            <span>Comment</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/share.png" alt="">
+            <span>Share</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/send.png" alt="">
+            <span>Send</span>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-author">
+          <img src="images/member-1.jpg" >
+          <div>
+            <h1>Osama Mohamed</h1>
+            <small>Founder of Elzero Web School | Instructor</small>
+            <small>3 hours ago</small>
+          </div>
+        </div>
+        <p>متخليش حد يستفزك لان معظمهم بيكون مستني رد فعلك علشان يمسكه عليك وبيكون باني سيناريو كامل على اللي انت هتعمله وبيسوقك للطريق اللي هو عاوزه، فلو حسيت انه فاض بيك من الموقف ابعد شوية كدة قبل متاخد تصرف وفكر كويس في ردة فعلك والمترتب عليها وهتخسر ايه لو عملتها، حصل معايا مواقف كتير من دي الأيام اللي فاتت وهحكيلكوا عنها باذن الله واتصرفت فيها ازاي، وهحكيلكوا عن "أكتر تعليق مستفز قابلني في حياتي"
+          —<br>
+          #نصائح_الزيرو</p>
+        <img src="images/post-1.jpg" width="100%">
+        <div class="post-stats">
+          <div>
+            <img src="images/thumbsup.png">
+            <img src="images/love.png">
+            <img src="images/clap.png">
+            <span class="liked-users">Elsam Mahfouz and 676 others</span>
+          </div>
+          <div>
+            <span>22 comments &middot; 40 shares</span>
+          </div>
+        </div>
+        <div class="post-activity">
+          <div>
+            <img src="images/profile-pic.jpg" class="post-activity-user-icon">
+            <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+          </div>
+          <div class="post-activity-link">
+            <img src="images/like.png" alt="">
+            <span>Like</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/comment.png" alt="">
+            <span>Comment</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/share.png" alt="">
+            <span>Share</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/send.png" alt="">
+            <span>Send</span>
+          </div>
+        </div>
+      </div>
+      <div class="post">
+        <div class="post-author">
+          <img src="images/member-1.jpg" >
+          <div>
+            <h1>Osama Mohamed</h1>
+            <small>Founder of Elzero Web School | Instructor</small>
+            <small>3 hours ago</small>
+          </div>
+        </div>
+        <p>متخليش حد يستفزك لان معظمهم بيكون مستني رد فعلك علشان يمسكه عليك وبيكون باني سيناريو كامل على اللي انت هتعمله وبيسوقك للطريق اللي هو عاوزه، فلو حسيت انه فاض بيك من الموقف ابعد شوية كدة قبل متاخد تصرف وفكر كويس في ردة فعلك والمترتب عليها وهتخسر ايه لو عملتها، حصل معايا مواقف كتير من دي الأيام اللي فاتت وهحكيلكوا عنها باذن الله واتصرفت فيها ازاي، وهحكيلكوا عن "أكتر تعليق مستفز قابلني في حياتي"
+          —<br>
+          #نصائح_الزيرو</p>
+        <img src="images/post-1.jpg" width="100%">
+        <div class="post-stats">
+          <div>
+            <img src="images/thumbsup.png">
+            <img src="images/love.png">
+            <img src="images/clap.png">
+            <span class="liked-users">Elsam Mahfouz and 676 others</span>
+          </div>
+          <div>
+            <span>22 comments &middot; 40 shares</span>
+          </div>
+        </div>
+        <div class="post-activity">
+          <div>
+            <img src="images/profile-pic.jpg" class="post-activity-user-icon">
+            <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+          </div>
+          <div class="post-activity-link">
+            <img src="images/like.png" alt="">
+            <span>Like</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/comment.png" alt="">
+            <span>Comment</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/share.png" alt="">
+            <span>Share</span>
+          </div>
+          <div class="post-activity-link">
+            <img src="images/send.png" alt="">
+            <span>Send</span>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- -------LEFT-SIDEBAR-------- -->  
+    <div class="right-sidebar">
+      <div class="sidebar-news">
+        <img src="images/more.png" class="info-icon">
+        <h3>Trending News</h3>
+        <a href="#">High demand for skilled manpower</a>
+        <span>1d ago &middot; 13,342 readers</span>
+        
+        <a href="#">Careers growing horizontally too</a>
+        <span>3d ago &middot; 132,032 readers</span>
+        
+        <a href="#">Less work visa for US, more for UK</a>
+        <span>5d ago &middot; 114,02 readers</span>
+        
+        <a href="#">Gautam Adani is the world's third richest</a>
+        <span>12h ago &middot; 23,042 readers</span>
+        <a href="#" class="read-more-link">Read More</a>
+      </div>
+      <div class="sidebar-ad">
+        <small>Ad &middot; &middot; &middot;</small>
+        <p>Master the 5 priciples of web design</p>
+        <div>
+          <img src="images/profile-pic.jpg" alt="">
+          <img src="images/mi-logo.png" alt="">
+        </div>
+        <b>Brand and Demand in Xiaomi</b>
+        <a href="#" class="ad-link">Learn More</a>
+      </div>
+      <div class="sidebar-useful-links">
+        <a href="#">About</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Help Center</a>
+        <a href="#">Privacy & Policy</a>
+        <a href="#">Advertisements</a>
+        <a href="#">Get the App</a>
+        <a href="#">More</a>
+        <div class="copyright-msg">
+          <img src="images/logo.png" >
+          <p>LinkedIn &#169 2023 All right reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

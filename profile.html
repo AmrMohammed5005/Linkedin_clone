@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linkedin - Clone </title>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="style.css">
+  <!-- GOOGLE FONTS  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Fredoka:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300&family=Tilt+Warp&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" >
+      </a>
+      <div class="search-box">
+        <img src="images/search.png">
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+    <div class="nav-center">
+      <ul>
+        <li><a href="#" class="active"><img src="images/home.png"> <span>Home</span></a></li>
+        <li><a href="#"><img src="images/network.png"> <span>My Network</span></a></li>
+        <li><a href="#"><img src="images/jobs.png"> <span>Jobs</span></a></li>
+        <li><a href="#"><img src="images/message.png"> <span>Messaging</span></a></li>
+        <li><a href="#"><img src="images/notification.png"> <span>Notification</span></a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="online">
+        <img src="images/profile-pic.jpg" class="nav-profile-img" onclick="toggleMenu()">
+      </div>
+    </div>
+    <!-- -----------PROFILE-DROP-DOWN-MENU------------ -->
+    <div class="profile-menu-wrap" id="profileMenu">
+      <div class="profile-menu">
+        <div class="user-info">
+          <img src="images/profile-pic.jpg" >
+          <div>
+            <h3>Amr Mohammed</h3>
+            <a href="#">See your profile</a>
+          </div>
+        </div>
+        <hr>
+        <a href="#" class="profile-menu-link">
+          <img src="images/feedback.png">
+          <p>Give Feedback</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/setting.png">
+          <p>Settings & Privacy</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/help.png">
+          <p>Help & Support</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/display.png">
+          <p>Display & Accessibility</p>
+          <span>></span>
+        </a>
+        <a href="#" class="profile-menu-link">
+          <img src="images/logout.png">
+          <p>Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+<!-- -------NAVBAR-CLOSE-------- -->
+  <div class="container">
+    <div class="profile-main">
+      <div class="profile-container">
+        <img src="images/cover-pic.png" width="100%">
+        <div class="profile-container-inner">
+          <img src="images/profile-pic.jpg" class="profile-pic">
+          <h1>Amr Mohammed</h1>
+          <b>Front-End developer @ Btengana | UI&UX designer</b>
+          <p>Cairo, Egypt &middot; <a href="#">Contact Info</a></p>
+          <div class="mutual-connection">
+            <img src="images/user-2.png" >
+            <span>1 mutual connection: Orlando James</span>
+          </div>
+          <div class="profile-btn">
+            <a href="#" class="primary-btn"><img src="images/connect.png" >Connect</a>
+            <a href="#"><img src="images/message.png" >Message</a>
+          </div>
+        </div>
+      </div>
+      <div class="profile-description">
+        <h2>About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ipsam, inventore sapiente officia quasi asperiores magni nam quod, vitae animi impedit, similique alias autem dicta error fuga! Rem, magnam dicta?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, explicabo exercitationem eligendi impedit architecto illo sint nostrum voluptatem voluptas alias tempore saepe aut at possimus fugiat distinctio est natus deserunt?</p>
+        <a href="#" class="see-more-link">See More... </a>
+      </div>
+      <div class="profile-description">
+        <h2>Experience</h2>
+        <div class="profile-desc-row">
+          <img src="images/microsoft.png" alt="">
+          <div>
+            <h3>Lead Front-End Developer</h3>
+            <b>Microsoft &middot; Full-time</b>
+            <b>Feb 2021 - Present &middot; 1.5 years</b>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus atque veritatis ipsam aspernatur accusantium beatae aperiam, at ullam minus dignissimos a eveniet, rem cum velit fugiat voluptas consectetur omnis aliquid?
+            </p>
+            <hr>
+          </div>
+        </div>
+        <div class="profile-desc-row">
+          <img src="images/slack.png" alt="">
+          <div>
+            <h3>Back-End Developer</h3>
+            <b>Slack &middot; Full-time</b>
+            <b>Feb 2020 - Present &middot; 1.5 years</b>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus atque veritatis ipsam aspernatur accusantium beatae aperiam, at ullam minus dignissimos a eveniet, rem cum velit fugiat voluptas consectetur omnis aliquid?
+            </p>
+            <hr>
+          </div>
+        </div>
+        <div class="profile-desc-row">
+          <img src="images/google.png" alt="">
+          <div>
+            <h3>Front-End Developer</h3>
+            <b>Google &middot; Full-time</b>
+            <b>Jun 2015 - Present &middot; 1.5 years</b>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus atque veritatis ipsam aspernatur accusantium beatae aperiam, at ullam minus dignissimos a eveniet, rem cum velit fugiat voluptas consectetur omnis aliquid?
+            </p>
+          </div>
+        </div>
+        <hr>
+        <a href="#" class="experience-link">Show all 7 experiences <img src="images/right-arrow.png" alt=""></a>
+      </div>
+      <div class="profile-description">
+        <h2>Education</h2>
+        <div class="profile-desc-row">
+          <img src="images/stanford.png" alt="">
+          <div>
+            <h3>Stanford University</h3>
+            <b>BSEE, Electrical Engineering</b>
+            <b>2018 - 2022</b>
+          </div>
+        </div>
+        <hr>
+        <div class="profile-desc-row">
+          <img src="images/north.png" alt="">
+          <div>
+            <h3>Northwestern University</h3>
+            <b>Computer Science</b>
+            <b>2015 - 2018</b>
+          </div>
+        </div>
+        <hr>
+        <div class="profile-desc-row">
+          <img src="images/mit.png" alt="">
+          <div>
+            <h3>Harvard University</h3>
+            <b>Computer Science</b>
+            <b>2010 - 2013</b>
+          </div>
+        </div>
+      </div>
+      <div class="profile-description">
+        <h2>Skills</h2>
+        <a href="#" class="skills-btn">Leadership</a>
+        <a href="#" class="skills-btn">Web Design</a>
+        <a href="#" class="skills-btn">Development</a>
+        <a href="#" class="skills-btn">Communication</a>
+        <a href="#" class="skills-btn">UI/UX</a>
+        <a href="#" class="skills-btn">Planning</a>
+        <a href="#" class="skills-btn">Coding</a>
+        <a href="#" class="skills-btn">JavaScript</a>
+        <a href="#" class="skills-btn">Python</a>
+      </div>
+      <div class="profile-description">
+        <h2>Languages</h2>
+        <a href="#" class="lang-btn">English</a>
+        <a href="#" class="lang-btn">Arabic</a>
+        <a href="#" class="lang-btn">Italian</a>
+      </div>
+    </div>
+    <!-- -----------PROFILE-SIDEBAR------------ -->
+    <div class="profile-sidebar">
+      <div class="sidebar-ad">
+        <small>Ad &middot; &middot; &middot;</small>
+        <p>Master the 5 priciples of web design</p>
+        <div>
+          <img src="images/profile-pic.jpg" alt="">
+          <img src="images/mi-logo.png" alt="">
+        </div>
+        <b>Brand and Demand in Xiaomi</b>
+        <a href="#" class="ad-link">Learn More</a>
+      </div>
+      <div class="sidebar-ppl">
+        <h3>People you may know</h3>
+        <div class="sidebar-ppl-row">
+          <img src="images/user-2.png" >
+          <div>
+            <h2>Samuel Tony</h2>
+            <p>Head of Markting @ Alibaba</p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+        <div class="sidebar-ppl-row">
+          <img src="images/user-4.png" >
+          <div>
+            <h2>Jana Sayed</h2>
+            <p>Front-End Developer @ Microsoft</p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+        <div class="sidebar-ppl-row">
+          <img src="images/user-5.png" >
+          <div>
+            <h2>Mohammed Taha</h2>
+            <p>Full-Stack Developer @ Jumia</p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+        <div class="sidebar-ppl-row">
+          <img src="images/user-2.png" >
+          <div>
+            <h2>Omar Ahemd</h2>
+            <p>Full-Stack Developer @ Google</p>
+            <a href="#">Connect</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="profile-footer">
+    <div class="sidebar-useful-links">
+      <a href="#">About</a>
+      <a href="#">Accessibility</a>
+      <a href="#">Help Center</a>
+      <a href="#">Privacy & Policy</a>
+      <a href="#">Advertisements</a>
+      <a href="#">Get the App</a>
+      <a href="#">More</a>
+      <div class="copyright-msg">
+        <img src="images/logo.png" >
+        <p>LinkedIn &#169 2023 All right reserved</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
